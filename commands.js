@@ -1456,6 +1456,27 @@ var commands = exports.commands = {
 		if (!user.joinRoom(targetRoom || room, connection)) {
 			return connection.sendTo(target, "|noinit|joinfailed|The room '"+target+"' could not be joined.");
 		}
+		if (target.toLowerCase() == "lobby") {
+			return connection.sendTo('lobby', '|html|<div class = "infobox"><center><i><b>Welcome to Mist!, home of the Pokémon Leagues.</b> All Leagues are open to discussion. We welcome everyone.</i><br />' +
+				'<br />' +
+				'If you have any questions, message one of the upper staff (@ or &amp;). For <b>important</b> questions, message one of the Administrators (~).<br />' +
+				'<br />' +
+				'<i>Be sure to check out some important rooms:</i><br />' +
+				'<button name="joinRoom" value="Tournaments"><b>Tournaments!</b></button>|<button name="joinRoom" value="The Moonlight League"><b>Our Official League!</b></button><br />' +
+				
+				'</div>');
+		}
+		if (target.toLowerCase() == "tournaments") {
+			return connection.sendTo('tournaments', '|html|<div class = "infobox"><center><big><big><b>Welcome to the Mist Tournaments Room!</b></big></big><br />' +
+				'<br />' +
+				'To join a tournament, type <b><blink>/j</blink></b>. To leave one, type <b><blink>/l</blink><b>.<br />' +
+				'<br />' +
+				'<i>To Staff: For more information on tournament commands, type <b><blink>/tourhelp</blink></b>.</i><br />' +
+				'<br />' +
+				'NOTE: The winner of these tournaments win a various amount of <b>Battle Points<b>!<br />' +
+				'</div>');
+		}
+	
 	},
 
 	rb: 'roomban',
