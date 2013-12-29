@@ -32,6 +32,29 @@ const MAX_REASON_LENGTH = 300;
 
 var commands = exports.commands = {
 	
+	hide: function(target, room, user) {
+		if (this.can('mute')) {
+			user.getIdentity = function(){
+				if(this.muted)	return '!' + this.name;
+				if(this.locked) return '‽' + this.name;
+				return ' ' + this.name;
+			};
+			user.updateIdentity();
+			this.sendReply('You have hidden your staff symbol.');
+			return false;
+		}
+
+	},
+
+	show: function(target, room, user) {
+		if (this.can('mute')) {
+			delete user.getIdentity
+			user.updateIdentity();
+			this.sendReply('You have revealed your staff symbol');
+			return false;
+		}
+	},
+	
 	 afk: 'away',
 	away: function(target, room, user, connection) {
 		if (!this.can('lock')) return false;
