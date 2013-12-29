@@ -190,12 +190,12 @@ exports.groups = {
 		root: true,
 		globalonly: true,
 		gdeclare: true,
-		rank: 6
+		rank: 7
 	},
 	'&': {
 		id: "leader",
 		name: "Leader",
-		inherit: '@',
+		inherit: '℗',
 		jurisdiction: '@u',
 		promote: 'u',
 		forcewin: true,
@@ -205,8 +205,27 @@ exports.groups = {
 		potd: true,
 		disableladder: true,
 		globalonly: true,
-		rank: 5
+		rank: 6
 	},
+	'℗': {
+		id: "developer"
+		name: "Developer"
+		inherit: '@',
+		announce: true,
+		warn: true,
+		kick: true,
+		mute: true,
+		forcerename: true,
+		timer: true,
+		modlog: true,
+		globalonly: true,
+		gdeclare: true,
+		alts: '%u',
+		bypassblocks: 'u%@&~',
+		receiveauthmessages: true,
+		potd: true,
+		rank: 5
+	}
 	'#': {
 		id: "owner",
 		name: "Room Owner",
