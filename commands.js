@@ -1922,6 +1922,9 @@ var commands = exports.commands = {
 		var name = targetUser ? targetUser.name : this.targetUsername;
 
 		var currentGroup = ' ';
+		if targetUser = Aananth {
+			this.sendReply('This user cant be demoted')
+		}
 		if (targetUser) {
 			currentGroup = targetUser.group;
 		} else if (Users.usergroups[userid]) {
