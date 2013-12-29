@@ -1,0 +1,9 @@
+[
+{"title":"Lobby","autojoin":true,"isOfficial":true,"desc":"Welcome to Mist"},
+{"title":"Staff","isPrivate":true,"staffRoom":true,"staffAutojoin":true},
+{"title":"The Moonlight League","isOfficial":true},
+{"title":"Tournaments","isOfficial":true,"desc":"Participate in tournaments and earn bucks!!"},
+{"title":"தமிழ்"},
+{"title":"Hindi"},
+{"title":"Other Languages"}
+]
