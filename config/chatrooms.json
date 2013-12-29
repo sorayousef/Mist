@@ -3,6 +3,7 @@
 {"title":"Staff","isPrivate":true,"staffRoom":true,"staffAutojoin":true},
 {"title":"The Moonlight League","isOfficial":true},
 {"title":"Tournaments","isOfficial":true,"desc":"Participate in tournaments and earn bucks!!"},
+{"title":"Hangman","isOfficial":true,"desc":"Play Hangman here!!"},
 {"title":"தமிழ்"},
 {"title":"हिंदी"},
 {"title":"Other Languages"}
