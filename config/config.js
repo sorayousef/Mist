@@ -182,84 +182,103 @@ exports.appealurl = '';
 //     - potd: Set PotD.
 //     - forcewin: /forcewin command.
 //     - battlemessage: /a command.
-exports.groupsranking = [' ', '+', '%', '@', '#', '&', '~'];
+exports.groupsranking = [' ', '+', '$', '%', '@', '#', '&', '~'];
 exports.groups = {
-	'~': {
-		id: "admin",
-		name: "Administrator",
-		root: true,
-		globalonly: true,
-		gdeclare: true,
-		rank: 6
-	},
-	'&': {
-		id: "leader",
-		name: "Leader",
-		inherit: '@',
-		jurisdiction: '@u',
-		promote: 'u',
-		forcewin: true,
-		declare: true,
-		modchatall: true,
-		rangeban: true,
-		potd: true,
-		disableladder: true,
-		globalonly: true,
-		rank: 5
-	},
-	'#': {
-		id: "owner",
-		name: "Room Owner",
-		inherit: '@',
-		jurisdiction: 'u',
-		roommod: true,
-		roomdriver: true,
-		declare: true,
-		modchatall: true,
-		roomonly: true,
-		rank: 4
-	},
-	'@': {
-		id: "mod",
-		name: "Moderator",
-		inherit: '%',
-		jurisdiction: 'u',
-		ban: true,
-		modchat: true,
-		roomvoice: true,
-		forcerename: true,
-		ip: true,
-		alts: '@u',
-		rank: 3
-	},
-	'%': {
-		id: "driver",
-		name: "Driver",
-		inherit: '+',
-		jurisdiction: 'u',
-		announce: true,
-		warn: true,
-		kick: true,
-		mute: true,
-		lock: true,
-		forcerename: true,
-		timer: true,
-		modlog: true,
-		alts: '%u',
-		bypassblocks: 'u%@&~',
-		receiveauthmessages: true,
-		rank: 2
-	},
-	'+': {
-		id: "voice",
-		name: "Voice",
-		inherit: ' ',
-		broadcast: true,
-		rank: 1
-	},
-	' ': {
-		ip: 's',
-		alts: 's',
-		rank: 0
-	}
+        '~': {
+                id: "admin",
+                name: "Administrator",
+                root: true,
+                globalonly: true,
+                gdeclare: true,
+                rank: 7
+        },
+        '&': {
+                id: "leader",
+                name: "Leader",
+                inherit: '@',
+                jurisdiction: '@u',
+                promote: 'u',
+                forcewin: true,
+                declare: true,
+                modchatall: true,
+                rangeban: true,
+                potd: true,
+                disableladder: true,
+                globalonly: true,
+                rank: 6
+        },
+        '$': {
+                id: "developer",
+                name: "Developer",
+                inherit: '@',
+                announce: true,
+                warn: true,
+                kick: true,
+                mute: true,
+                forcerename: true,
+                timer: true,
+                modlog: true,
+                globalonly: true,
+                gdeclare: true,
+                alts: '%u',
+                bypassblocks: 'u%@&~',
+                receiveauthmessages: true,
+                potd: true,
+                rank: 5
+        },
+        '#': {
+                id: "owner",
+                name: "Room Owner",
+                inherit: '@',
+                jurisdiction: 'u',
+                roommod: true,
+                roomdriver: true,
+                declare: true,
+                modchatall: true,
+                roomonly: true,
+                rank: 4
+        },
+        '@': {
+                id: "mod",
+                name: "Moderator",
+                inherit: '%',
+                jurisdiction: 'u',
+                ban: true,
+                modchat: true,
+                roomvoice: true,
+                forcerename: true,
+                ip: true,
+                alts: '@u',
+                rank: 3
+        },
+        '%': {
+                id: "driver",
+                name: "Driver",
+                inherit: '+',
+                jurisdiction: 'u',
+                announce: true,
+                warn: true,
+                kick: true,
+                mute: true,
+                lock: true,
+                forcerename: true,
+                timer: true,
+                modlog: true,
+                alts: '%u',
+                bypassblocks: 'u%@&~',
+                receiveauthmessages: true,
+                rank: 2
+        },
+        '+': {
+                id: "voice",
+                name: "Voice",
+                inherit: ' ',
+                broadcast: true,
+                rank: 1
+        },
+        ' ': {
+                ip: 's',
+                alts: 's',
+                rank: 0
+        }
 };
