@@ -136,6 +136,7 @@ exports.herokuhack = false;
 exports.customavatars = {
 	//'userid': 'customavatar.png'
 	'Aananth': 'aananth.gif'
+	'macrarazy': 'macrarazy.png'
 };
 
 // appealurl - specify a URL containing information on how users can appeal
