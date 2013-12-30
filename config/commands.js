@@ -625,12 +625,27 @@ var commands = exports.commands = {
 	groups: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('+ <b>Voice</b> - They can use ! commands like !groups, and talk during moderated chat<br />' +
-			'% <b>Driver</b> - The above, and they can also mute and lock users and check for alts<br />' +
-			'@ <b>Moderator</b> - The above, and they can ban users<br />' +
-			'&amp; <b>Leader</b> - The above, and they can promote moderators and force ties<br />' +
-			'~ <b>Administrator</b> - They can do anything, like change what this message says<br />' +
-			'# <b>Room Owner</b> - They are administrators of the room and can almost totally control it');
+			'% <b>Driver</b> - The above, and they can also mute and lock users and check for alts (/help %)<br />' +
+			'@ <b>Moderator</b> - The above, and they can ban users (/help @)<br />' +
+			'&amp; <b>Leader</b> - The above, and they can promote moderators and force ties (/help &amp;)<br />' +
+			'~ <b>Administrator</b> - They can do anything, like change what this message says (/help ~)(edit: proved it! ~ mac)<br />' +
+			'# <b>Room Owner</b> - They are administrators of the room and can almost totally control it<br />' +
+			'~ <b>Gods of the Server</b> - macrarazy, sudan12');
 	},
+	
+	mac: 'macrarazy',
+         macrarazy: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;
+                 this.sendReplyBox('<center><font size=3><b>macrarazy</font></b> <br> <img src="http://www.smogon.com/media/forums/data/avatars/l/195/195459.jpg.m.1379686413" <br> <marquee><b>Yerh baby, yerh!</b></marquee> <br> <blink><b>Rank:<font color=red> Administrator (~)')},
+                 
+                 
+        ucn: 'n',
+        unovachampionn: 'n'
+        n: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;
+                 this.sendReplyBox('<center><img src="http://www.smogon.com/media/forums/data/avatars/l/13/13073.jpg.m.1375935517"><br><img src="http://pldh.net/media/pokemon/conquest/sprite/392.png"><img src="http://i.imgur.com/KyLb7Xb.gif"><img src="http://i.imgur.com/Z7f9imD.png"><br><font color="orange"><blink> Ace: Infernape</font></blink><br><font color="brown"> Kickin\' Ass Since Day 1')},
+        
+        },
 
 	opensource: function(target, room, user) {
 		if (!this.canBroadcast()) return;
