@@ -1672,6 +1672,26 @@ var commands = exports.commands = {
                         targetUser.leaveRoom(room.id);
                 }
         },
+        
+        warn: function(target, room, user) {
+		if (!target) return this.parse('/help warn');
+
+		target = this.splitTarget(target);
+		var targetUser = this.targetUser;
+		if (!targetUser || !targetUser.connected) {
+			return this.sendReply('User '+this.targetUsername+' not found.');
+		}
+		if (room.isPrivate && room.auth) {
+			return this.sendReply('You can\'t warn here: This is a privately-owned room not subject to global rules.');
+		}
+		if (target.length > MAX_REASON_LENGTH) {
+			return this.sendReply('The reason is too long. It cannot exceed ' + MAX_REASON_LENGTH + ' characters.');
+		}
+		if (!this.can('warn', targetUser, room)) return false;
+
+		this.addModCommand(''+targetUser.name+' was warned by '+user.name+'.' + (target ? " (" + target + ")" : ""));
+		targetUser.send('|c|~|/warn '+target);
+	},
 
 	redirect: 'redir',
 	redir: function (target, room, user, connection) {
